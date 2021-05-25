@@ -10,10 +10,12 @@
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
 <body>
+    <div id="container"></div>
     <script type="text/babel">
+        const destination = document.querySelector("#container")
         ReactDOM.render(
-            <h1>Sherlock Holmes</h1>,
-            document.body
+            <h1>Wizz Wizard</h1>,
+            destination
         );
     </script>
 </body>
