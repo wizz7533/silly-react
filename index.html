@@ -23,17 +23,21 @@
 <body>
     <div id="container"></div>
     <script type="text/babel">
-        const destination = document.querySelector("#container")
-        ReactDOM.render(
-            <div>
-                <h3><i>Batman</i></h3>
-                <h3><i>Ironman</i></h3>
-                <h3><i>Cage</i></h3>
-                <h3><i>Mega Man</i></h3>
+    class HelloWorld extends React.Component {
 
-            </div>,
-            destination
-        );
+        render() {
+            return <p>Hello, componetized world!</p>
+        }   
+    }
+    ReactDOM.render(
+        <HelloWorld />,
+        document.querySelector("#container")
+    )
+
     </script>
 </body>
 </html>
+<!-- <h3><i>Batman</i></h3>
+<h3><i>Ironman</i></h3>
+<h3><i>Cage</i></h3>
+<h3><i>Mega Man</i></h3> -->
