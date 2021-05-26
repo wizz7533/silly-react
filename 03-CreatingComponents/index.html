@@ -23,8 +23,13 @@
 
         class Square extends React.Component {
             render() {
+                const squareStyle = {
+                    height: 150,
+                    backgroundColor: "#FF6633"
+                };
                 return(
-                    <br />
+                    <div style={squareStyle}>
+                    </div>
                 );
             }
         }
@@ -50,7 +55,7 @@
                 };
                 return (
                     <div style={cardStyle}>
-
+                        <Square />
                     </div>   
                 );
             }
@@ -60,7 +65,6 @@
         ReactDOM.render(
             <div>
                 <Card />
-                
             </div>,
             document.querySelector("#container")
         );
