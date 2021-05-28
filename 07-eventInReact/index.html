@@ -44,6 +44,14 @@
                     count: 0
                 };
 
+                this.increase = this.increase.bind(this);
+
+            }
+
+            increase(event) {
+                this.setState({
+                    count : this.state.count +1
+                });
             }
 
             render() {
@@ -69,7 +77,7 @@
                 return (
                     <div style={backgroundStyle}>
                         <Counter display={this.state.count} />
-                        <button style={buttonStyle}>+</button>    
+                        <button style={buttonStyle} onClick={this.increase}>+</button>    
                     </div>
                 );
             };
