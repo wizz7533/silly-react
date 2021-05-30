@@ -85,10 +85,18 @@
                 return (
                     <div style={backgroundStyle}>
                         <Counter display={this.state.count} />
-                        <button style={buttonStyle} onClick={this.increase}>+</button>    
+                        <PlusButton clickHandler={this.increase} />   
                     </div>
                 );
             };
+        }
+
+        class PlusButton extends React.Component {
+            render() {
+                return(
+                    <button onClick={this.props.clikHandler}>+</button>
+                );
+            }
         }
         
         ReactDOM.render(
