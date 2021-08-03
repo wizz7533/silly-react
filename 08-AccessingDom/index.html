@@ -55,6 +55,7 @@
     <h1 id="colorHeading">Colorizer</h1>
     <div id="container"></div>
     <script type="text/babel">
+
         class Colorizer extends React.Component {
             constructor(props) {
                 super(props);
@@ -106,12 +107,24 @@
                             placeholder="Enter a color value"></input>
                             <button type="submit">go</button>
                         </form>
+                        <ColorLabel color={this.state.bgColor} />
                     </div>
                 );
             }   
         }
 
-         ReactDOM.render(
+        let heading = document.querySelector("#colorHeading");
+
+        class ColorLabel extends React.Component {
+            render() {
+                return ReactDOM.createPortal(
+                    ": " + this.props.color,
+                    heading
+                );
+            }
+        }
+
+        ReactDOM.render(
             <div>
                 <Colorizer />
             </div >,
